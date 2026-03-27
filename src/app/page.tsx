@@ -23,12 +23,12 @@ export default function Home() {
 
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center px-[5%] relative pt-24 pb-12">
-        <div className="w-full flex flex-col md:flex-row items-center justify-between z-10 gap-12 max-w-7xl mx-auto">
+        <div className="w-full flex flex-col md:flex-row items-center justify-center z-10 gap-8 max-w-7xl mx-auto">
           <div className="max-w-2xl text-center md:text-left mt-10 md:mt-0">
             <h1 className="font-display font-extrabold text-5xl md:text-7xl uppercase mb-6 leading-tight">
-              DO YOU<br />
-              NEED A<br />
-              <span className="text-primary relative inline-block">WEBSITE?</span>
+              WEB &<br />
+              GRAPHIC<br />
+              <span className="text-primary relative inline-block">DESIGN.</span>
             </h1>
             <p className="text-gray-600 dark:text-gray-400 text-lg mb-10 max-w-lg mx-auto md:mx-0 cursor-none transition-colors duration-300">
               Need a website you can trust to grow your business? Contact us today—we're ready to design and build something amazing for you.
@@ -44,7 +44,7 @@ export default function Home() {
               <img 
                 src="/hero.jpg" 
                 alt="Web and Graphic Design Hero" 
-                className="w-full h-auto object-contain drop-shadow-2xl opacity-95 group-hover:opacity-100 transition-opacity duration-500"
+                className="w-full h-auto object-contain drop-shadow-2xl transition-opacity duration-500"
                 loading="lazy"
               />
             </div>
@@ -96,68 +96,70 @@ export default function Home() {
         {/* Subtle background accent */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary opacity-5 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-          {/* LEFT — Headline + Stats */}
-          <div>
+        <div className="max-w-7xl mx-auto">
+          {/* TOP — Full-width Headline + Stats + CTA */}
+          <div className="mb-20">
             <p className="text-primary uppercase tracking-[0.3em] text-sm font-semibold mb-4 cursor-none">What I Offer</p>
-            <h2 className="font-display font-extrabold text-5xl md:text-6xl leading-tight mb-8 cursor-none">
-              Trusted &<br />
-              <span className="text-primary">Professional</span><br />
-              Services
-            </h2>
-            <p className="text-gray-400 dark:text-gray-600 text-lg mb-12 max-w-md cursor-none">
-              From bold graphic design to high-performance websites — I deliver work that makes your brand stand out and convert.
-            </p>
 
-            {/* Stats Row */}
-            <div className="grid grid-cols-3 gap-6">
-              {[
-                { value: "50+", label: "Projects Done" },
-                { value: "30+", label: "Happy Clients" },
-                { value: "3+", label: "Years Exp." },
-              ].map((stat, i) => (
-                <div key={i} className="border-l-2 border-primary pl-4">
-                  <p className="font-display font-extrabold text-3xl text-white dark:text-dark cursor-none">{stat.value}</p>
-                  <p className="text-gray-400 dark:text-gray-500 text-sm cursor-none">{stat.label}</p>
-                </div>
-              ))}
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-10 mb-14">
+              <h2 className="font-display font-extrabold text-5xl md:text-7xl leading-tight cursor-none">
+                Trusted &amp; <span className="text-primary">Professional</span> Services
+              </h2>
+              <p className="text-gray-400 dark:text-gray-600 text-lg max-w-sm cursor-none md:text-right">
+                From bold graphic design to high-performance websites — I deliver work that makes your brand stand out and convert.
+              </p>
             </div>
 
-            <a href="#contact" className="inline-flex items-center gap-3 mt-12 px-8 py-4 rounded-full bg-primary text-dark font-display font-bold hover:bg-[#d4e840] hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(230,250,97,0.25)] transition-all cursor-none">
-              Let's Work Together
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </a>
+            {/* Stats + CTA Row */}
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-10 pt-10 border-t border-white/10 dark:border-black/10">
+              <div className="flex gap-12">
+                {[
+                  { value: "50+", label: "Projects Done" },
+                  { value: "30+", label: "Happy Clients" },
+                  { value: "3+",  label: "Years Exp." },
+                ].map((stat, i) => (
+                  <div key={i} className="border-l-2 border-primary pl-4">
+                    <p className="font-display font-extrabold text-4xl text-white dark:text-dark cursor-none">{stat.value}</p>
+                    <p className="text-gray-400 dark:text-gray-500 text-sm cursor-none">{stat.label}</p>
+                  </div>
+                ))}
+              </div>
+              <a href="#contact" className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-primary text-dark font-display font-bold hover:bg-[#d4e840] hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(230,250,97,0.25)] transition-all cursor-none">
+                Let's Work Together
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
           </div>
 
-          {/* RIGHT — Service Cards */}
-          <div className="flex flex-col gap-5">
+          {/* BOTTOM — Full-width 3-column Service Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
-                icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>,
+                icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>,
                 title: "Website Design",
                 desc: "Modern, responsive, and performance-optimized websites built to elevate your digital presence and drive real results.",
                 tag: "Next.js · React · Tailwind"
               },
               {
-                icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>,
+                icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>,
                 title: "Graphic Design",
                 desc: "Custom graphics, flyers, branding, and visual assets crafted to resonate with your audience and strengthen your identity.",
                 tag: "Flyers · Social Media · Branding"
               },
               {
-                icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a3 3 0 0 0-6 0v4"/><path d="M2 7h20"/><path d="M22 7v3a2 2 0 0 1-2 2v0a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12v0a2 2 0 0 1-2-2V7"/></svg>,
+                icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a3 3 0 0 0-6 0v4"/><path d="M2 7h20"/><path d="M22 7v3a2 2 0 0 1-2 2v0a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12v0a2 2 0 0 1-2-2V7"/></svg>,
                 title: "Brand Strategy",
                 desc: "Comprehensive branding strategies to position your business for growth, credibility and long-term success.",
                 tag: "Identity · Strategy · Launch"
               }
             ].map((service, i) => (
-              <div key={i} className="group flex gap-6 items-start p-6 rounded-2xl border border-white/10 dark:border-black/5 bg-white/5 dark:bg-white hover:border-primary dark:hover:border-primary hover:bg-white/10 dark:hover:bg-white transition-all duration-300 cursor-none">
-                <div className="shrink-0 w-14 h-14 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-dark transition-all duration-300">
+              <div key={i} className="group flex flex-col gap-6 p-8 rounded-3xl border border-white/10 dark:border-black/5 bg-white/5 dark:bg-white hover:border-primary dark:hover:border-primary hover:bg-white/10 dark:hover:bg-gray-50 transition-all duration-300 cursor-none">
+                <div className="w-16 h-16 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-dark transition-all duration-300">
                   {service.icon}
                 </div>
                 <div>
-                  <h3 className="font-display text-xl font-bold mb-1 group-hover:text-primary transition-colors cursor-none">{service.title}</h3>
-                  <p className="text-gray-400 dark:text-gray-600 text-sm leading-relaxed mb-2 cursor-none">{service.desc}</p>
+                  <h3 className="font-display text-2xl font-bold mb-3 group-hover:text-primary transition-colors cursor-none">{service.title}</h3>
+                  <p className="text-gray-400 dark:text-gray-600 leading-relaxed mb-4 cursor-none">{service.desc}</p>
                   <span className="text-xs text-primary/70 font-mono">{service.tag}</span>
                 </div>
               </div>
