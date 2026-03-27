@@ -1,25 +1,12 @@
 import CustomCursor from '@/components/CustomCursor'
-import { ThemeToggle } from '@/components/ThemeToggle'
+import { Navbar } from '@/components/Navbar'
 
 export default function Home() {
   return (
     <main className="min-h-screen relative overflow-hidden transition-colors duration-300">
       <CustomCursor />
       
-      {/* Navbar */}
-      <nav className="fixed top-0 w-full flex justify-between items-center px-[5%] py-6 z-50 backdrop-blur-md border-b border-black/10 dark:border-white/10 bg-white/80 dark:bg-dark/80 transition-colors duration-300">
-        <div className="font-display font-extrabold text-2xl tracking-widest cursor-none">
-          TRISS<span className="font-light text-primary">MCALLEN</span>
-        </div>
-        <div className="flex items-center gap-8">
-          <ul className="hidden md:flex gap-8 items-center">
-            <li><a href="#services" className="text-sm font-medium hover:text-primary transition-colors cursor-none text-dark dark:text-white">Services</a></li>
-            <li><a href="#work" className="text-sm font-medium hover:text-primary transition-colors cursor-none text-dark dark:text-white">Work</a></li>
-            <li><a href="#contact" className="px-6 py-2 rounded-full border border-primary text-primary font-display font-semibold hover:bg-primary hover:text-dark transition-all cursor-none dark:hover:text-dark">Contact Us</a></li>
-          </ul>
-          <ThemeToggle />
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center px-[5%] relative pt-24 pb-12">
@@ -52,7 +39,7 @@ export default function Home() {
         </div>
 
         {/* Hero Background Illustrations based on user reference */}
-        <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden opacity-60 dark:opacity-30">
+        <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden opacity-10 md:opacity-60 dark:opacity-5 dark:md:opacity-30">
           {/* Top Right Orange Block */}
           <div className="absolute top-0 right-[5%] w-32 md:w-48 h-64 bg-secondary"></div>
           
@@ -92,7 +79,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-32 px-[5%] bg-dark dark:bg-gray-50 text-white dark:text-dark transition-colors duration-300 overflow-hidden relative">
+      <section id="services" className="py-32 px-[5%] bg-dark dark:bg-gray-50 text-white dark:text-dark transition-colors duration-300 overflow-hidden relative [--primary:#E6FA61] dark:[--primary:#7E9A00]">
         {/* Subtle background accent */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary opacity-5 rounded-full blur-3xl pointer-events-none" />
 
@@ -210,16 +197,16 @@ export default function Home() {
       </section>
 
       {/* Web Design Portfolio Section */}
-      <section id="web-work" className="py-32 px-[5%] bg-gray-50 dark:bg-dark transition-colors duration-300">
+      <section id="web-work" className="py-32 px-[5%] bg-dark dark:bg-gray-50 text-white dark:text-dark transition-colors duration-300">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
             <div>
-              <h2 className="font-display text-4xl md:text-5xl cursor-none mb-4 text-dark dark:text-white transition-colors">Explore Website Work</h2>
-              <p className="text-gray-600 dark:text-gray-400 max-w-xl cursor-none transition-colors">
+              <h2 className="font-display text-4xl md:text-5xl cursor-none mb-4 text-white dark:text-dark transition-colors">Explore Website Work</h2>
+              <p className="text-gray-400 dark:text-gray-600 max-w-xl cursor-none transition-colors">
                 High-performance, beautifully crafted websites built to drive conversions and elevate your brand's digital experience.
               </p>
             </div>
-            <a href="#contact" className="hidden md:inline-flex px-6 py-3 rounded-full border border-dark dark:border-white text-dark dark:text-white font-display font-semibold hover:bg-dark hover:text-white dark:hover:bg-white dark:hover:text-dark transition-all cursor-none">
+            <a href="#contact" className="hidden md:inline-flex px-6 py-3 rounded-full border border-white dark:border-dark text-white dark:text-dark font-display font-semibold hover:bg-white hover:text-dark dark:hover:bg-dark dark:hover:text-white transition-all cursor-none">
               Start Your Project
             </a>
           </div>

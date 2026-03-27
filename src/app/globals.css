@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --primary: #ABC91A; /* Adjusted lighter green for contrast on white backgrounds */
+    --primary: #7E9A00; /* Rich dark green — readable on white in all sections */
   }
   .dark {
     --primary: #E6FA61; /* Original bright lime for dark backgrounds */
