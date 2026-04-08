@@ -179,6 +179,16 @@ export default function Home() {
               { src: "/portfolio/websiteads.jpg", title: "Website Agency Ad", alt: "Orange modern geometric agency ad" },
               { src: "/portfolio/laundry.jpeg", title: "Fresh Laundromat Social Post", alt: "Blue professional laundry service ad" },
               { src: "/portfolio/design.jpeg", title: "Custom Graphic Design Ad", alt: "Black and yellow modern ad" },
+              { src: "/portfolio/graphic-1.jpeg", title: "Graphic Design Work", alt: "Graphic design portfolio piece" },
+              { src: "/portfolio/graphic-2.jpeg", title: "Creative Design", alt: "Creative graphic design project" },
+              { src: "/portfolio/graphic-3.jpeg", title: "Visual Design", alt: "Visual design portfolio piece" },
+              { src: "/portfolio/graphic-4.jpeg", title: "Design Work", alt: "Design portfolio work" },
+              { src: "/portfolio/graphic-5.jpeg", title: "Brand Design", alt: "Brand design graphic" },
+              { src: "/portfolio/graphic-6.jpeg", title: "Graphic Art", alt: "Graphic art portfolio piece" },
+              { src: "/portfolio/graphic-7.jpeg", title: "Design Project", alt: "Design project portfolio" },
+              { src: "/portfolio/graphic-8.jpeg", title: "Creative Artwork", alt: "Creative artwork design" },
+              { src: "/portfolio/graphic-9.jpeg", title: "Graphic Design", alt: "Graphic design work" },
+              { src: "/portfolio/graphic-10.jpeg", title: "Design Artwork", alt: "Design artwork portfolio" },
             ].map((item, index) => (
               <div key={index} className="group relative rounded-3xl overflow-hidden mb-6 break-inside-avoid bg-gray-100 dark:bg-dark border border-black/5 dark:border-white/10 shadow-lg transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
                 <img 
